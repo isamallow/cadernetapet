@@ -1,0 +1,250 @@
+﻿<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulário Caderneta Pet</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+<script src="./scripts/js/jquery.mask.js" type="text/javascript"></script>
+
+<script>
+  $(document).ready(function () {
+    $('.cpf').mask('000.000.000-00', { reverse: true });
+    $('.telefone').mask('(00) 0000-0000');
+    $('.cep').mask('00.000-000');
+    $('.celular').mask('(00) 0-0000-0000');
+    $('.numero').mask('00000');
+  });
+</script>
+
+
+  <img class="wave" src="img/bg_form-wave.png">
+  <div class="container">
+    <div class="title">
+      CADASTRO
+    </div><br><br>
+
+    <form method="post" enctype="application/x-www-form-urlencoded" action="./process-form.php" />
+    
+
+    <div class="form">
+    
+      
+      <div class="inputfield">
+        <label>Username</label>
+        <input type="text" name="usuario" class="input">
+      </div>
+      
+      <div class="inputfield">
+        <label>Senha</label>
+        <input type="password" name="senha" class="input">
+      </div>
+
+    
+
+
+      <div class="divider"></div>
+
+      
+
+      <div class="inputfield">
+        <label>Nome completo</label>
+        <input type="text" name="nome" class="input">
+      </div>
+      <div class="inputfield">
+        <label>Nome social</label>
+        <input type="text" name="nome-social" class="input">
+      </div>
+      <div class="inputfield">
+        <label>Pseudônimo</label>
+        <input type="text" name="apelido" class="input">
+      </div>
+      <div class="inputfield">
+        <label>Data de Nascimento</label>
+        <input type="date" name="nascimento" class="input">
+      </div>
+      <div class="inputfield">
+        <label>CPF</label>
+        <input type="text" class="cpf input" name="cpf">
+      </div>
+      <div class="inputfield">
+        <label>Sexo biológico</label>
+        <div class="custom_select">
+          <select name="sexo">
+            <option value="" selected disabled hidden></option>
+            <option value="feminino">Feminino</option>
+            <option value="masculino">Masculino</option>
+          </select>
+        </div>
+      </div>
+      <div class="inputfield">
+        <label>Gênero</label>
+        <input type="text" name="identidade-de-genero" class="input">
+      </div>
+    
+
+
+      <div class="inputfield">
+        <label>Email</label>
+        <input type="email" name="e-mail" class="input">
+      </div>
+
+
+
+      
+      <div class="inputfield">
+        <label>Telefone fixo</label>
+        <input type="text" class="telefone input" name="telefone">
+      </div>
+      <div class="inputfield">
+        <label>Celular</label>
+        <input type="text" class="celular input" name="celular">
+      </div>
+      <div class="inputfield checkbox">
+        <label class="check">
+          <input type="checkbox" name="whatsapp" value="s">
+          <span class="checkmark"></span>
+        </label>
+        <p>Selecione se número do celular for do WhatsApp.</p>
+      </div>
+    
+
+
+ 
+      <div class="divider"></div>
+      <div class="inputfield">
+        <label>CEP</label>
+        <input type="text" class="cep input" name="cep">
+      </div>
+      <div class="inputfield">
+        <label>Cidade</label>
+        <input type="text" name="cidade" class="input">
+      </div>
+      <div class="inputfield">
+        <label>Estado</label>
+        <div class="custom_select">
+          <select name="estado">
+            <option value="" selected disabled hidden></option>
+            <option value="AC">Acre</option>
+            <option value="AL">Alagoas</option>
+            <option value="AP">Amapá</option>
+            <option value="AM">Amazonas</option>
+            <option value="BA">Bahia</option>
+            <option value="CE">Ceará</option>
+            <option value="DF">Distrito Federal</option>
+            <option value="ES">Espírio Santo</option>
+            <option value="GO">Goiás</option>
+            <option value="MA">Maranhão</option>
+            <option value="MT">Mato Grosso</option>
+            <option value="MS">Mato Grosso do Sul</option>
+            <option value="MG">Minas Gerais</option>
+            <option value="PA">Pará</option>
+            <option value="PB">Paraíba</option>
+            <option value="PR">Paraná</option>
+            <option value="PE">Pernambuco</option>
+            <option value="PI">Piauí</option>
+            <option value="RJ">Rio de Janeiro</option>
+            <option value="RN">Rio Grande do Norte </option>
+            <option value="RS">Rio Grande do Sul</option>
+            <option value="RO">Rondônia</option>
+            <option value="RR">Roraima</option>
+            <option value="SC">Santa Catarina</option>
+            <option value="SP">São Paulo</option>
+            <option value="SE">Sergipe</option>
+            <option value="TO">Tocantins</option>
+          </select>
+        </div>
+      </div>
+      <div class="inputfield">
+        <label>Tipo logradouro</label>
+        <div class="custom_select">
+          <select  name="tipo-de-logradouro">
+            <option value="" selected disabled hidden></option>
+            <option value="Aeroporto">Aeroporto</option>
+            <option value="Alameda">Alameda</option>
+            <option value="Área">Área</option>
+            <option value="Avenida">Avenida</option>
+            <option value="Chacara">Chácara</option>
+            <option value="Colônia">Colônia</option>
+            <option value="Condomínio">Condomínio</option>
+            <option value="Conjunto">Conjunto</option>
+            <option value="Distrito">Distrito</option>
+            <option value="Esplanada">Esplanada</option>
+            <option value="Estação">Estação</option>
+            <option value="Estrada">Estrada</option>
+            <option value="Favela">Favela</option>
+            <option value="Fazenda">Fazenda</option>
+            <option value="Feira">Feira</option>
+            <option value="Jardim">Jardim</option>
+            <option value="Ladeira">Ladeira</option>
+            <option value="Lago">Lago</option>
+            <option value="Lagoa">Lagoa</option>
+            <option value="Largo">Largo</option>
+            <option value="Loteamento">Loteamento</option>
+            <option value="Morro">Morro</option>
+            <option value="Núcleo">Núcleo</option>
+            <option value="Parque">Parque</option>
+            <option value="Passarela">Passarela</option>
+            <option value="Pátio">Pátio</option>
+            <option value="Quadra">Quadra</option>
+            <option value="Recanto">Recanto</option>
+            <option value="Residencial">Residencial</option>
+            <option value="Rodovia">Rodovia</option>
+            <option value="Rua">Rua</option>
+            <option value="Setor">Setor</option>
+            <option value="Sítio">Sítio</option>
+            <option value="Travessa">Travessa</option>
+            <option value="Trecho">Trecho</option>
+            <option value="Trevo">Trevo</option>
+            <option value="Via">Via</option>
+            <option value="Viaduto">Viaduto</option>
+            <option value="Viela">Viela</option>
+            <option value="Vila">Vila</option>
+          </select>
+        </div>
+      </div>
+      <div class="inputfield">
+        <label>Logradouro</label>
+        <input type="text" name="logradouro" class="input">
+      </div>
+      <div class="inputfield">
+        <label>Número</label>
+        <input type="text" class="numero input" name="numero-logradouro">
+      </div>
+      <div class="inputfield">
+        <label>Bairro</label>
+        <input type="text" name="bairro" class="input">
+      </div>
+      <div class="inputfield">
+        <label>Complemento</label>
+        <input type="text" name="complemento" class="input">
+      </div>
+      <div class="inputfield">
+        <label>Referência</label>
+        <input type="text" name="referencia" class="input">
+      </div>
+    
+
+
+
+      <div class="inputfield">
+        <input type="submit" value="CADASTRAR" class="btn">
+      </div>
+    </div>
+  </div>
+
+
+
+
+</form>
+
+</body>
+
+
+</html>
